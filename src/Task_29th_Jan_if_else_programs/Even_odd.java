@@ -1,6 +1,6 @@
 package Task_29th_Jan_if_else_programs;
 
-import java.awt.*;
+
 import java.util.Scanner;
 public class Even_odd {
     public static void main(String[] args){
