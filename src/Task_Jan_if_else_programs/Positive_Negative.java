@@ -1,4 +1,4 @@
-package Task_29th_Jan_if_else_programs;
+package Task_Jan_if_else_programs;
 
 import java.util.Scanner;
 
