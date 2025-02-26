@@ -10,5 +10,11 @@ public class StringMain {
         str2.append("Country");
         System.out.println(str2); // modifies str2 to "My Country"
 
+        int str1_length = str1.length();
+        System.out.println(str1_length);
+
+        int str2_length = str2.length();
+        System.out.println(str2_length);
+
     }
 }
