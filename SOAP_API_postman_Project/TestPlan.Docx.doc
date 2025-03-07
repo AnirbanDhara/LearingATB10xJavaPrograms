@@ -1,0 +1,359 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Text To Word</title></head><body><h1>Test Plan for Number Conversion SOAP API</h1>
+<p>Created by: Anirban Dhara</p>
+<h2>1. Objective</h2>
+<p>This document outlines the test plan for the Number Conversion SOAP API application. The objective is to ensure that the API correctly converts numeric values to their word representations as expected for the target audience, API consumers and developers integrating with the number conversion service.</p>
+<h2>2. Scope</h2>
+<p>The scope of this test plan includes:</p>
+<p><strong>Features to be tested:</strong></p>
+<ul>
+<li>NumberToWords conversion functionality</li>
+<li>API response accuracy</li>
+<li>Error handling</li>
+<li>Performance under various conditions</li>
+</ul>
+<p><strong>Types of testing:</strong></p>
+<ul>
+<li>Manual testing</li>
+<li>Automated testing</li>
+<li>Performance testing</li>
+<li>Security testing</li>
+<li>Boundary testing</li>
+</ul>
+<p><strong>Environments:</strong></p>
+<ul>
+<li>Different operating systems</li>
+<li>Various tools for API testing (Postman, SoapUI, curl)</li>
+<li>Different network conditions</li>
+</ul>
+<p><strong>Evaluation criteria:</strong></p>
+<ul>
+<li>Accuracy of number to words conversion</li>
+<li>Response time</li>
+<li>Proper error handling</li>
+<li>Conformance to SOAP standards</li>
+</ul>
+<p><strong>Team roles and responsibilities:</strong></p>
+<ul>
+<li>Test lead</li>
+<li>API testers</li>
+<li>Developers</li>
+<li>QA engineers</li>
+</ul>
+<h2>3. Inclusions</h2>
+<p><strong>Introduction:</strong> Overview of the test plan for the Number Conversion SOAP API, including purpose, scope, and goals for ensuring reliable numeric value to text conversion.</p>
+<p><strong>Test Objectives:</strong></p>
+<ul>
+<li>Verify accurate conversion of numbers to words</li>
+<li>Ensure proper handling of various input types (positive numbers, negative numbers, zero, decimals, etc.)</li>
+<li>Validate API response format and structure</li>
+<li>Confirm error handling for invalid inputs</li>
+<li>Measure and optimize API performance</li>
+</ul>
+<h2>4. Exclusions</h2>
+<ul>
+<li>UI testing (as this is a backend API service)</li>
+<li>Integration with specific client applications</li>
+<li>Database testing (if the service doesn't use persistent storage)</li>
+<li>Any other conversion services not explicitly mentioned in the requirements</li>
+</ul>
+<h2>5. Test Environments</h2>
+<p><strong>Operating Systems:</strong></p>
+<ul>
+<li>Windows 10/11</li>
+<li>macOS</li>
+<li>Linux (Ubuntu, CentOS)</li>
+</ul>
+<p><strong>API Testing Tools:</strong></p>
+<ul>
+<li>Postman</li>
+<li>SoapUI</li>
+<li>curl</li>
+<li>REST-assured (for automated testing)</li>
+</ul>
+<p><strong>Network Connectivity:</strong></p>
+<ul>
+<li>High-speed stable connection</li>
+<li>Throttled connection</li>
+<li>Intermittent connection</li>
+</ul>
+<p><strong>Hardware/Software Requirements:</strong></p>
+<ul>
+<li>Minimum 8GB RAM, i5 processor or equivalent</li>
+<li>Modern web browsers (for tools like Postman)</li>
+<li>Command-line interface</li>
+</ul>
+<p><strong>Security Protocols:</strong></p>
+<ul>
+<li>HTTPS/TLS if applicable</li>
+<li>Authentication mechanisms (if implemented)</li>
+</ul>
+<p><strong>Access Permissions:</strong></p>
+<ul>
+<li>Test team access to API endpoint</li>
+<li>Developer access for debugging</li>
+<li>Admin access for monitoring</li>
+</ul>
+<h2>6. Defect Reporting Procedure</h2>
+<p><strong>Criteria for identifying defects:</strong></p>
+<ul>
+<li>Incorrect word conversion</li>
+<li>API returning unexpected status codes</li>
+<li>Slow response times (over 1 second)</li>
+<li>Improper error messages</li>
+<li>Non-compliance with SOAP standards</li>
+</ul>
+<p><strong>Steps for reporting defects:</strong></p>
+<ol>
+<li>Document the exact input provided</li>
+<li>Capture the actual response</li>
+<li>Note the expected response</li>
+<li>Include complete request/response payloads</li>
+<li>Record environment details</li>
+<li>Provide curl command or request details for reproduction</li>
+</ol>
+<p><strong>Triage and prioritization:</strong></p>
+<ul>
+<li>Critical: Defects causing service unavailability or data corruption</li>
+<li>High: Incorrect conversions or failed requests</li>
+<li>Medium: Performance issues or inconsistent responses</li>
+<li>Low: Minor formatting issues or edge cases</li>
+</ul>
+<p><strong>Tracking tools:</strong></p>
+<ul>
+<li>JIRA for defect tracking</li>
+<li>Confluence for documentation</li>
+</ul>
+<p><strong>Roles and responsibilities:</strong></p>
+<ul>
+<li>Testers: Identify and report defects</li>
+<li>Test lead: Validate and prioritize defects</li>
+<li>Developers: Fix and provide feedback on defects</li>
+<li>QA: Verify fixes</li>
+</ul>
+<p><strong>Communication channels:</strong></p>
+<ul>
+<li>Daily status meetings</li>
+<li>Email notifications</li>
+<li>JIRA comments</li>
+<li>Slack/Teams for immediate concerns</li>
+</ul>
+<p><strong>Metrics:</strong></p>
+<ul>
+<li>Number of defects found per test cycle</li>
+<li>Defect density</li>
+<li>Mean time to resolve defects</li>
+<li>Percentage of passed test cases</li>
+</ul>
+<h2>7. Test Strategy</h2>
+<p><strong>Step 1: Test scenarios and test cases creation:</strong></p>
+<p><strong>Techniques:</strong></p>
+<ul>
+<li>Equivalence Class Partition (grouping numbers by type)</li>
+<li>Boundary Value Analysis (testing limits of acceptable values)</li>
+<li>Decision Table Testing (for different input combinations)</li>
+<li>Error Guessing (anticipating common issues)</li>
+</ul>
+<p><strong>Test Case Categories:</strong></p>
+<ol>
+<li>
+<p><strong>Functional Testing</strong></p>
+<ul>
+<li>Valid positive integers (single digit, double digit, triple digit, etc.)</li>
+<li>Large numbers (millions, billions, etc.)</li>
+<li>Zero value</li>
+<li>Negative numbers (if supported)</li>
+<li>Decimal numbers (if supported)</li>
+<li>Special number formats (scientific notation, etc.)</li>
+</ul>
+</li>
+<li>
+<p><strong>Error Handling Testing</strong></p>
+<ul>
+<li>Non-numeric inputs</li>
+<li>Empty values</li>
+<li>NULL values</li>
+<li>Extremely large numbers (beyond supported range)</li>
+<li>Special characters in input</li>
+<li>Invalid XML structure</li>
+</ul>
+</li>
+<li>
+<p><strong>Performance Testing</strong></p>
+<ul>
+<li>Response time measurement</li>
+<li>Concurrent requests</li>
+<li>Stress testing (high volume of requests)</li>
+<li>Endurance testing (continuous operation)</li>
+</ul>
+</li>
+<li>
+<p><strong>Security Testing</strong></p>
+<ul>
+<li>XML injection attempts</li>
+<li>Large payload attacks</li>
+<li>Authentication bypass (if applicable)</li>
+<li>Input validation checks</li>
+</ul>
+</li>
+</ol>
+<p><strong>Step 2: Testing procedure:</strong></p>
+<p><strong>Smoke Testing:</strong></p>
+<ul>
+<li>Verify API accessibility</li>
+<li>Confirm basic number conversion functionality</li>
+</ul>
+<p><strong>In-depth Testing:</strong></p>
+<ul>
+<li>Execute all test cases methodically</li>
+<li>Document results thoroughly</li>
+<li>Capture all request/response pairs</li>
+</ul>
+<p><strong>Defect Reporting:</strong></p>
+<ul>
+<li>Log defects immediately in JIRA</li>
+<li>Include curl commands for reproduction</li>
+<li>Attach request/response payloads</li>
+</ul>
+<p><strong>Types of Testing:</strong></p>
+<ul>
+<li>Functional Testing</li>
+<li>Regression Testing after fixes</li>
+<li>Performance Testing</li>
+<li>Security Testing</li>
+<li>Compatibility Testing</li>
+</ul>
+<p><strong>Step 3: Best Practices:</strong></p>
+<ul>
+<li><strong>Context Driven Testing:</strong> Adapt testing based on API behavior</li>
+<li><strong>Automation First:</strong> Automate repetitive test cases</li>
+<li><strong>Exploratory Testing:</strong> Try unexpected inputs and scenarios</li>
+<li><strong>End-to-End Flow Testing:</strong> Simulate real user flows with the API</li>
+</ul>
+<h2>8. Test Schedule</h2>
+<p><strong>Tasks and Time Duration:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Duration</th>
+<th>Dates</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Test Plan Creation</td>
+<td>2 days</td>
+<td>[Start Date] - [End Date]</td>
+</tr>
+<tr>
+<td>Test Case Development</td>
+<td>3 days</td>
+<td>[Start Date] - [End Date]</td>
+</tr>
+<tr>
+<td>Test Environment Setup</td>
+<td>1 day</td>
+<td>[Start Date] - [End Date]</td>
+</tr>
+<tr>
+<td>Test Execution</td>
+<td>5 days</td>
+<td>[Start Date] - [End Date]</td>
+</tr>
+<tr>
+<td>Defect Reporting and Retesting</td>
+<td>3 days</td>
+<td>[Start Date] - [End Date]</td>
+</tr>
+<tr>
+<td>Test Summary Report</td>
+<td>1 day</td>
+<td>[Start Date] - [End Date]</td>
+</tr>
+</tbody>
+</table>
+<h2>9. Test Deliverables</h2>
+<ul>
+<li>Test Plan Document</li>
+<li>Test Cases Document</li>
+<li>Test Execution Reports</li>
+<li>Defect Reports</li>
+<li>Test Summary Report</li>
+<li>Automated Test Scripts (if applicable)</li>
+<li>Performance Test Results</li>
+</ul>
+<h2>10. Entry and Exit Criteria</h2>
+<p><strong>Requirement Analysis:</strong></p>
+<ul>
+<li><strong>Entry:</strong> API specification document received</li>
+<li><strong>Exit:</strong> Requirements understood and test cases drafted</li>
+</ul>
+<p><strong>Test Environment Setup:</strong></p>
+<ul>
+<li><strong>Entry:</strong> Access to API endpoint provided</li>
+<li><strong>Exit:</strong> Tools configured and connectivity verified</li>
+</ul>
+<p><strong>Test Execution:</strong></p>
+<ul>
+<li><strong>Entry:</strong> Test cases ready, environment prepared</li>
+<li><strong>Exit:</strong> All test cases executed, defects reported</li>
+</ul>
+<p><strong>Test Closure:</strong></p>
+<ul>
+<li><strong>Entry:</strong> All critical defects resolved</li>
+<li><strong>Exit:</strong> Test summary report approved</li>
+</ul>
+<h2>11. Tools</h2>
+<p><strong>List of Tools:</strong></p>
+<ul>
+<li>Postman for API testing</li>
+<li>SoapUI for SOAP specific testing</li>
+<li>JMeter for performance testing</li>
+<li>curl for command-line testing</li>
+<li>JIRA for defect tracking</li>
+<li>Excel for test case documentation</li>
+<li>Automated testing frameworks (e.g., REST-assured, SoapUI automated tests)</li>
+</ul>
+<h2>12. Risks and Mitigations</h2>
+<p><strong>Possible Risks:</strong></p>
+<ul>
+<li>API unavailability during testing</li>
+<li>Incomplete or changing requirements</li>
+<li>Performance issues with large numbers</li>
+<li>Limited test coverage due to time constraints</li>
+<li>Environment configuration issues</li>
+</ul>
+<p><strong>Mitigations:</strong></p>
+<ul>
+<li>Schedule testing during stable API availability</li>
+<li>Regular communication with stakeholders about requirements</li>
+<li>Prioritize test cases to ensure critical functionality is tested first</li>
+<li>Implement automated testing to increase coverage</li>
+<li>Prepare multiple test environments</li>
+</ul>
+<h2>13. Approvals</h2>
+<p><strong>Documents for Client Approval:</strong></p>
+<ul>
+<li>Test Plan Document</li>
+<li>Test Cases Document</li>
+<li>Test Summary Report</li>
+</ul>
+<p><strong>Approvers:</strong></p>
+<ul>
+<li>Project Manager</li>
+<li>QA Lead</li>
+<li>Development Lead</li>
+<li>Client Representative (if applicable)</li>
+</ul>
+<h2>Appendix: Sample curl Command</h2>
+<pre><code>curl --location 'https://www.dataaccess.com/webservicesserver/NumberConversion.wso' \
+--header 'Content-Type: application/soap+xml; charset=utf-8' \
+--data '&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"&gt;
+  &lt;soap:Body&gt;
+    &lt;NumberToWords xmlns="http://www.dataaccess.com/webservicesserver/"&gt;
+      &lt;ubiNum&gt;235&lt;/ubiNum&gt;
+    &lt;/NumberToWords&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;'
+</code></pre></body></html>
